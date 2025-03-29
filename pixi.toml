@@ -1,0 +1,25 @@
+[workspace]
+channels = ["conda-forge"]
+name = "nerf-pytorch"
+platforms = ["osx-arm64", "linux-64", "win-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "3.10.*"
+
+[pypi-dependencies]
+torch = { version = ">=2.5.1", index = "https://download.pytorch.org/whl/cu124" }
+torchvision = { version = ">=0.20.1", index = "https://download.pytorch.org/whl/cu124" }
+imageio = "*"
+imageio-ffmpeg = "*"
+matplotlib = "*"
+configargparse = "*"
+tensorboard = ">=2.0"
+tqdm = "*"
+opencv-python = "*"
+
+[target.osx.pypi-dependencies]
+torch = { version = ">=2.5.1", index = "https://download.pytorch.org/whl/cpu" }
+torchvision = { version = ">=0.20.1", index = "https://download.pytorch.org/whl/cpu" }

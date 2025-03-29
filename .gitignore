@@ -7,3 +7,9 @@
 *.dae
 data/*
 logs/*
+# pixi environments
+.pixi
+*.egg-info
+
+# data
+data
